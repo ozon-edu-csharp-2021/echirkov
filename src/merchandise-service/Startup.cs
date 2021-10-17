@@ -21,7 +21,7 @@ namespace merchandise_service
         {
             app.UseRouting();
 
-            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+            app.UseEndpoints(endpoints => { });
         }
     }
 }
