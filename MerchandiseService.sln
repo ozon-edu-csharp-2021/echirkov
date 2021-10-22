@@ -12,7 +12,7 @@ ProjectSection(SolutionItems) = preProject
 	docker-compose.yaml = docker-compose.yaml
 EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "merchandise-service", "src\merchandise-service\merchandise-service.csproj", "{997E2547-60A6-4EF8-B444-B439937C6DB5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerchandiseService", "src\MerchandiseService\MerchandiseService.csproj", "{997E2547-60A6-4EF8-B444-B439937C6DB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
