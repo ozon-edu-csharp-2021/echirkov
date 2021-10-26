@@ -11,7 +11,10 @@ namespace MerchandiseHttpClients
 {
     public interface IMerchandiseClient
     {
-        
+        Task<GetMerchandiseInfoResponse> GetMerchandiseInfo(GetMerchandiseInfoRequest merchandiseInfoRequest,
+            CancellationToken token);
+        Task<GiveOutMerchandiseResponse> GiveOutMerchandise(GiveOutMerchandiseRequest giveOutMerchandiseRequest,
+            CancellationToken token);
     }
     
     public class MerchandiseClient : IMerchandiseClient
