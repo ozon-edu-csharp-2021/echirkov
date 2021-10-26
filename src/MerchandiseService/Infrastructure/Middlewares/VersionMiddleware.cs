@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -11,8 +12,13 @@ namespace MerchandiseService.Infrastructure.Middlewares
         
         public async Task InvokeAsync(HttpContext context)
         {
-            var version = Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? "no version";
-            await context.Response.WriteAsync(version);
+            var serviceInfo = new
+            {
+                Version = Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? "no version",
+                ServiceName = Assembly.GetExecutingAssembly().GetName().Name
+            };
+
+            await context.Response.WriteAsync(serviceInfo.ToString());
         }
     }
 }

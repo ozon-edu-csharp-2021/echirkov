@@ -19,4 +19,9 @@
       <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Merchandise.Grpc\Merchandise.Grpc.csproj" />
+      <ProjectReference Include="..\MerchandiseHttpModels\MerchandiseHttpModels.csproj" />
+    </ItemGroup>
+
 </Project>

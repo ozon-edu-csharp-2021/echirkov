@@ -29,33 +29,29 @@ namespace MerchandiseService.Infrastructure.Middlewares
         {
             if (request.ContentLength == 0)
                 return;
-            
-            var builder = new StringBuilder(Environment.NewLine);
-          
-            builder.Append($"Request route: {request.Path}");
 
-            if (request.Headers.Any())
-                builder.AppendLine("Request headers:");
-            foreach (var header in request.Headers)
-            {
-                builder.AppendLine($"{header.Key}:{header.Value}");
-            }
+            _logger.LogInformation($"Request route: {request.Path}");
 
-            _logger.LogInformation(builder.ToString());
+            LogHeaders(request.Headers);
         }
-
+        
         private void LogResponseInformation(HttpResponse response)
         {
             if (response.ContentLength == 0)
                 return;
 
-            var builder = new StringBuilder(Environment.NewLine);
+            LogHeaders(response.Headers);
+        }
 
-            if (response.Headers.Any())
-                builder.AppendLine("Request headers:");
-            foreach (var header in response.Headers)
+        private void LogHeaders(IHeaderDictionary headers)
+        {
+            var builder = new StringBuilder();
+
+            if (headers.Any())
+                builder.AppendLine("Headers:");
+            foreach (var (key, value) in headers)
             {
-                builder.AppendLine($"{header.Key}:{header.Value}");
+                builder.AppendLine($"{key}:{value}");
             }
 
             _logger.LogInformation(builder.ToString());

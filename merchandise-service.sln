@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F9BCCCF3-5FC6-4A77-AEA4-4E90FEC74809}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E18A7620-2BE8-4B61-B32D-A3C69F75C66A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{B511B273-2978-4471-87EC-89C8BB468150}"
+ProjectSection(SolutionItems) = preProject
+	README.md = README.md
+	Dockerfile = Dockerfile
+	.dockerignore = .dockerignore
+	docker-compose.yaml = docker-compose.yaml
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerchandiseService", "src\MerchandiseService\MerchandiseService.csproj", "{997E2547-60A6-4EF8-B444-B439937C6DB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerchandiseHttpModels", "src\MerchandiseHttpModels\MerchandiseHttpModels.csproj", "{EF3BE124-BBBE-462F-9573-ADD88F73BAE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerchandiseHttpClients", "src\MerchandiseHttpClients\MerchandiseHttpClients.csproj", "{26EB270F-4196-4D01-95D3-56E789E3CC61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merchandise.Grpc", "src\Merchandise.Grpc\Merchandise.Grpc.csproj", "{17C8C532-8E79-4050-9693-CC22F397CA8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{997E2547-60A6-4EF8-B444-B439937C6DB5} = {F9BCCCF3-5FC6-4A77-AEA4-4E90FEC74809}
+		{EF3BE124-BBBE-462F-9573-ADD88F73BAE9} = {F9BCCCF3-5FC6-4A77-AEA4-4E90FEC74809}
+		{26EB270F-4196-4D01-95D3-56E789E3CC61} = {F9BCCCF3-5FC6-4A77-AEA4-4E90FEC74809}
+		{17C8C532-8E79-4050-9693-CC22F397CA8A} = {F9BCCCF3-5FC6-4A77-AEA4-4E90FEC74809}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{997E2547-60A6-4EF8-B444-B439937C6DB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{997E2547-60A6-4EF8-B444-B439937C6DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{997E2547-60A6-4EF8-B444-B439937C6DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{997E2547-60A6-4EF8-B444-B439937C6DB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF3BE124-BBBE-462F-9573-ADD88F73BAE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF3BE124-BBBE-462F-9573-ADD88F73BAE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF3BE124-BBBE-462F-9573-ADD88F73BAE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF3BE124-BBBE-462F-9573-ADD88F73BAE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26EB270F-4196-4D01-95D3-56E789E3CC61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26EB270F-4196-4D01-95D3-56E789E3CC61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26EB270F-4196-4D01-95D3-56E789E3CC61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26EB270F-4196-4D01-95D3-56E789E3CC61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17C8C532-8E79-4050-9693-CC22F397CA8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17C8C532-8E79-4050-9693-CC22F397CA8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17C8C532-8E79-4050-9693-CC22F397CA8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17C8C532-8E79-4050-9693-CC22F397CA8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
