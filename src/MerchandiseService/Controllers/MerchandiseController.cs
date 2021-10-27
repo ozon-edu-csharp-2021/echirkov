@@ -23,15 +23,15 @@ namespace MerchandiseService.Controllers
             CancellationToken cancellationToken)
         {
             await _merchandiseService.GetMerchandiseInfo(cancellationToken);
-            return Ok();
+            return Ok(new GetMerchandiseInfoResponse());
         }
         
         [HttpPost("GiveOut")]
-        public async ValueTask<IActionResult> GiveOutMerchandise([FromBody] GiveOutMerchandiseResponse giveOutMerchandiseResponse, 
+        public async ValueTask<IActionResult> GiveOutMerchandise([FromBody] GiveOutMerchandiseRequest giveOutMerchandiseRequest, 
             CancellationToken cancellationToken)
         {
             await _merchandiseService.GiveOutMerchandise(cancellationToken);
-            return Ok();
+            return Ok(new GiveOutMerchandiseResponse());
         }
     }
 }
