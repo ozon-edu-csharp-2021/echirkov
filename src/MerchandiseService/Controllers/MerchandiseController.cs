@@ -20,17 +20,17 @@ namespace MerchandiseService.Controllers
         
         [HttpPost("GetInfo")]
         public async ValueTask<IActionResult> GetMerchandiseInfo([FromBody] GetMerchandiseInfoRequest getMerchandiseInfoRequest, 
-            CancellationToken cancellationToken)
+            CancellationToken ct)
         {
-            await _merchandiseService.GetMerchandiseInfo(cancellationToken);
+            await _merchandiseService.GetMerchandiseInfo(ct);
             return Ok(new GetMerchandiseInfoResponse());
         }
         
         [HttpPost("GiveOut")]
         public async ValueTask<IActionResult> GiveOutMerchandise([FromBody] GiveOutMerchandiseRequest giveOutMerchandiseRequest, 
-            CancellationToken cancellationToken)
+            CancellationToken ct)
         {
-            await _merchandiseService.GiveOutMerchandise(cancellationToken);
+            await _merchandiseService.GiveOutMerchandise(ct);
             return Ok(new GiveOutMerchandiseResponse());
         }
     }

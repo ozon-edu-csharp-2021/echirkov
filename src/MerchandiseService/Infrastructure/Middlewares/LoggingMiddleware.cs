@@ -47,7 +47,9 @@ namespace MerchandiseService.Infrastructure.Middlewares
             var builder = new StringBuilder();
 
             if (headers.Any())
+            {
                 builder.AppendLine("Headers:");
+            }
             foreach (var (key, value) in headers)
             {
                 builder.AppendLine($"{key}:{value}");

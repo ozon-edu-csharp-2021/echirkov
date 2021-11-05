@@ -5,11 +5,11 @@ using MerchandiseService.Services;
 
 namespace MerchandiseService.GrpcServices
 {
-    public class MerchandiseGrpcServise : MerchandiseGrpc.MerchandiseGrpcBase
+    public class MerchandiseGrpcService : MerchandiseGrpc.MerchandiseGrpcBase
     {
         private readonly IMerchandiseService _merchandiseService;
 
-        public MerchandiseGrpcServise(IMerchandiseService merchandiseService)
+        public MerchandiseGrpcService(IMerchandiseService merchandiseService)
         {
             _merchandiseService = merchandiseService;
         }
